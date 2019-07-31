@@ -6,11 +6,10 @@ var fakeData = require("faker");
 var randomWord = faker.random.word();
 
 app.get("/", function(req,res) {
-        res.render("index.html", {"variableName":randomWord});
+        res.render("index.ejs", {"variableName":randomWord});
         });
-
 app.get("/index", function(req,res) {
-        res.render("index.html", {"variableName":randomWord});
+        res.render("index.ejs", {"variableName":randomWord});
         });
 
 app.get("/linux", function(req,res) {
