@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 app.engine('html', require('ejs').renderFile);
 app.use(express.static("public"));
-var fakeData = require("faker");
+var fakeData = require('faker');
 var randomWord = faker.random.word();
 
 app.get("/", function(req,res) {
