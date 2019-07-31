@@ -3,14 +3,14 @@ const app = express();
 app.engine('html', require('ejs').renderFile);
 app.use(express.static("public"));
 var fakeData = require("faker");
-var randomSentence = faker.lorem.sentence(word_count = 10, supplemental = false, random_words_to_add = 0);
+var randomWord = faker.random.word();
 
 app.get("/", function(req,res) {
-        res.render("index.ejs", {"variableName":randomSentence});
+        res.render("index.html", {"variableName":randomWord});
         });
 
 app.get("/index", function(req,res) {
-        res.render("index.ejs", {"variableName":randomSentence});
+        res.render("index.html", {"variableName":randomWord});
         });
 
 app.get("/linux", function(req,res) {
