@@ -5,11 +5,11 @@ app.use(express.static("public"));
 var fakeData = require("faker");
 
 app.get("/", function(req,res) {
-        res.render("index.html");
+        res.render("index.ejs", {"variableName":randomSentence});
         });
 
 app.get("/index", function(req,res) {
-        res.render("index.html");
+        res.render("index.ejs", {"variableName":randomSentence});
         });
 
 app.get("/linux", function(req,res) {
